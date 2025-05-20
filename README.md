@@ -1,24 +1,26 @@
-Food Order Application
-This is a food ordering application with a React frontend and Node.js backend.
-Setup Instructions
-Backend Setup
+# Food Order Application
 
-Navigate to the backend directory:
+This is a food ordering application with a React frontend and Node.js backend.
+
+## Setup Instructions
+
+### Backend Setup
+
+1. Navigate to the backend directory:
 cd backend
 
-Install dependencies:
+2. Install dependencies:
 npm i
 
-Configure your database:
-
-Open database/db.js file
-Modify the database connection settings:
-
-javascriptfoodOrderDB = await mysql.createConnection({
+3. Configure your database:
+- Open `database/db.js` file
+- Modify the database connection settings:
+```javascript
+foodOrderDB = await mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: <your root password>,  // Change this to your MySQL root password
-  database: <your database name>,  // Change this to your database name
+  password: "your-password-here",  // Change this to your MySQL root password
+  database: "your-database-name",  // Change this to your database name
 });
 
 Start the backend server:
@@ -58,3 +60,5 @@ Technologies Used
 Frontend: React, TanStack Query, React Router
 Backend: Node.js, Express
 Database: MySQL
+
+
