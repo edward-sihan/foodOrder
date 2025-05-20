@@ -7,58 +7,71 @@ This is a food ordering application with a React frontend and Node.js backend.
 ### Backend Setup
 
 1. Navigate to the backend directory:
-cd backend
+   ```bash
+   cd backend
+   ```
 
 2. Install dependencies:
-npm i
+   ```bash
+   npm i
+   ```
 
 3. Configure your database:
-- Open `database/db.js` file
-- Modify the database connection settings:
-```javascript
-foodOrderDB = await mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "your-password-here",  // Change this to your MySQL root password
-  database: "your-database-name",  // Change this to your database name
-});
+   - Open `database/db.js` file
+   - Modify the database connection settings:
+   ```javascript
+   foodOrderDB = await mysql.createConnection({
+     host: "localhost",
+     user: "root",
+     password: "your-password-here",  // Change this to your MySQL root password
+     database: "your-database-name",  // Change this to your database name
+   });
+   ```
 
-Start the backend server:
-npm run dev
-The backend will start running on http://localhost:3000
+4. Start the backend server:
+   ```bash
+   npm run dev
+   ```
 
-Frontend Setup
+   The backend will start running on http://localhost:3000
 
-Navigate to the frontend directory:
-cd frontend
+### Frontend Setup
 
-Install dependencies:
-npm i
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
 
-Create a .env file in the frontend root directory with the following content:
-VITE_BASE_URL="http://localhost:3000/api"
+2. Install dependencies:
+   ```bash
+   npm i
+   ```
 
-Start the frontend development server:
-npm run dev
-The frontend application will be available at http://localhost:5173 (or another port if 5173 is already in use)
+3. Create a `.env` file in the frontend root directory with the following content:
+   ```
+   VITE_BASE_URL="http://localhost:3000/api"
+   ```
 
-Running the Application
+4. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
 
-Make sure the backend server is running first
-Then start the frontend server
-Access the application through your browser at the URL displayed after starting the frontend
+   The frontend application will be available at http://localhost:5173 (or another port if 5173 is already in use)
 
-Features
+## Running the Application
 
-Browse available food shops
-View food items for each shop
-Add items to cart
-Place orders
+1. Make sure the backend server is running first
+2. Then start the frontend server
+3. Access the application through your browser at the URL displayed after starting the frontend
 
-Technologies Used
+## Features
 
-Frontend: React, TanStack Query, React Router
-Backend: Node.js, Express
-Database: MySQL
+- Browse available food shops
+- View food items for each shop
 
+## Technologies Used
 
+- **Frontend**: React, TanStack Query, React Router, tailwind, axios, lucide-react
+- **Backend**: Node.js, Express
+- **Database**: MySQL
